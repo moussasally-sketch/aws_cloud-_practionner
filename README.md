@@ -1,0 +1,26 @@
+Step-by-Step Instructions (Using AWS Management Console)Log in to the AWS Management Console:Go to console.aws.amazon.com.
+Navigate to Services > EC2 (under Compute).
+
+Select Your Instance:In the left menu, click Instances.
+Check the box next to the instance you want to resize (e.g., i-1234567890abcdef0).
+Note its current type (e.g., t3.micro) in the details pane.
+
+Stop the Instance:With the instance selected, click Actions > Instance state > Stop instance.
+Confirm the action. The status will change to "Stopping" then "Stopped" (may take 1-2 minutes).
+Why? You can't resize a running instance.
+
+Change the Instance Type:With the stopped instance still selected, click Actions > Instance settings > Change instance type.
+In the dialog:Select the new type (e.g., t3.small for more CPU/memory).
+
+Step-by-Step Instructions (Using AWS Management Console)Log in to the AWS Management Console:Go to console.aws.amazon.com.
+Navigate to Services > EC2 (under Compute).
+
+Review compatibility warnings if any.
+Click Apply.
+
+The change applies immediately (no confirmation needed).
+
+Start the Instance:Click Actions > Instance state > Start instance.
+Confirm. The status will change to "Starting" then "Running" (1-2 minutes).
+
+
